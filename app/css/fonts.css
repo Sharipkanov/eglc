@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'Arial';
+	src: url('../fonts/subset-ArialMT.eot');
+	src: url('../fonts/subset-ArialMT.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/subset-ArialMT.woff2') format('woff2'),
+		url('../fonts/subset-ArialMT.woff') format('woff'),
+		url('../fonts/subset-ArialMT.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/subset-MyriadPro-Bold.eot');
+	src: url('../fonts/subset-MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/subset-MyriadPro-Bold.woff2') format('woff2'),
+		url('../fonts/subset-MyriadPro-Bold.woff') format('woff'),
+		url('../fonts/subset-MyriadPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/subset-MyriadPro-Cond.eot');
+	src: url('../fonts/subset-MyriadPro-Cond.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/subset-MyriadPro-Cond.woff2') format('woff2'),
+		url('../fonts/subset-MyriadPro-Cond.woff') format('woff'),
+		url('../fonts/subset-MyriadPro-Cond.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/subset-MyriadPro-Regular.eot');
+	src: url('../fonts/subset-MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/subset-MyriadPro-Regular.woff2') format('woff2'),
+		url('../fonts/subset-MyriadPro-Regular.woff') format('woff'),
+		url('../fonts/subset-MyriadPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

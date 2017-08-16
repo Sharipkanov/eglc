@@ -112,7 +112,7 @@ gulp.task('twig', function () {
 
 /* COMPASS ------------------------------------------------------------------ */
 gulp.task('compass', function () {
-    gulp.src(sources.sass.watch)
+    gulp.src('app/sass/_icons.sass')
         .pipe(plumber())
         .pipe(compass({
             sass: sources.sass.dist,
@@ -130,7 +130,7 @@ gulp.task('compass', function () {
 });
 
 /* SASS --------------------------------------------------------------------- */
-gulp.task('sass', ["compass"], function () {
+gulp.task('sass', ['compass'], function () {
     return gulp.src(sources.sass.src)
         .pipe(plumber({
             errorHandler: onError
@@ -233,11 +233,11 @@ gulp.task('images', function () {
  ---------------------------------------------------------------------------- */
 gulp.task('watch', function () {
     // gulp.watch('bower.json', ["bower"]);
-    gulp.watch(sources.sass.watch, ['compass']);
+    gulp.watch(sources.sass.watch, ['sass']);
     // gulp.watch(sources.pug.watch, ["pug"]);
     gulp.watch(sources.twig.watch, ["twig"]);
     gulp.watch(sources.js.es6_watch, ['es6']);
     gulp.watch(sources.js.watch).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'es6', 'twig', 'compass', 'watch']);
+gulp.task('default', ['browser-sync', 'es6', 'twig', 'sass', 'watch']);

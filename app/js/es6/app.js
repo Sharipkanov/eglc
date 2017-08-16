@@ -205,11 +205,14 @@ class YOURAPPNAME {
         plugin.bindings = function () {
             plugin.openPopupEl.on('click', function (e) {
                 e.preventDefault();
+
                 const pop = $(this).attr('data-popup-target');
                 plugin.openPopup(pop);
             });
 
             plugin.closePopupEl.on('click', function (e) {
+                e.preventDefault();
+
                 let pop;
                 if (this.hasAttribute('data-popup-target')) {
                     pop = $(this).attr('data-popup-target');
@@ -221,6 +224,7 @@ class YOURAPPNAME {
             });
 
             plugin.changePopupEl.on('click', function (e) {
+                e.preventDefault();
                 const closingPop = $(this).attr('data-closing-popup');
                 const openingPop = $(this).attr('data-opening-popup');
 
@@ -264,6 +268,59 @@ class YOURAPPNAME {
         console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
         // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
         // Please do not use jQuery ready state function to avoid mass calling document event trigger!
+
+        const popups = app.popups();
+
+        $(document).on('click', '.nav-link', function(event){
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 500);
+        });
+
+        $(document).on('submit', '.callback-form', function(e) {
+            e.preventDefault();
+
+            const $form = $(this);
+            const $formAnswer = $form.find('.form-answer');
+            const $formInputs = $form.find(':input');
+            const data = {
+                sendEmail: true
+            };
+
+            $formInputs.prop('readonly', true);
+
+            $.each($form.serializeArray(), function(key, input) {
+                data[input.name] = input.value;
+            });
+
+            $formAnswer.empty();
+
+            $.post('http://portfolio.gamm.biz/eglc/mail.php', data, function(response) {
+                const $formResponseContainer = $('<div class="fw-mt-30 fw-width-1-1 fw-bg-color-white fw-border-box fw-pt-5 fw-pb-5 fw-pl-5 fw-pr-5"></div>');
+                let $formMessage;
+
+                if(response.status) {
+                    $form.trigger('reset');
+                    $formMessage = $('<span class="fw-color-green">Спасибо! Ваша заявка принята</span>');
+                } else {
+                    $formMessage = $('<span>Извините что-то пошло нет так! Попробуйте позже</span>');
+                }
+
+                $formResponseContainer.append($formMessage);
+                $formResponseContainer.appendTo($formAnswer);
+
+                $formInputs.prop('readonly', false);
+
+                setTimeout(function() {
+                    popups.closePopup('callback');
+                    $formAnswer.empty();
+                }, 4000);
+            }, 'json');
+        });
+
+        new WOW().init();
     });
 
 })();

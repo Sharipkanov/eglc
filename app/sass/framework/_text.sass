@@ -4,23 +4,26 @@
     content: ''
     clear: both
 
+.fw-text-decoration-none
+  text-decoration: none
+
 @each $value in left, right
-  .fw-text-#{$value}
+  .fw-float-#{$value}
     float: $value
 
-  .fw-text-#{$value}\@xs
+  .fw-float-#{$value}\@xs
     @media screen and (min-width: $extraSmall)
       float: $value
 
-  .fw-text-#{$value}\@s
+  .fw-float-#{$value}\@s
     @media screen and (min-width: $small)
       float: $value
 
-  .fw-text-#{$value}\@m
+  .fw-float-#{$value}\@m
     @media screen and (min-width: $medium)
       float: $value
 
-  .fw-text-#{$value}\@l
+  .fw-float-#{$value}\@l
     @media screen and (min-width: $large)
       float: $value
 

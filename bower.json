@@ -4,5 +4,9 @@
   "description": "Gulp project builder",
   "author": "qube.kz",
   "dependencies": {
+    "normalize-css": "^7.0.0",
+    "jquery": "^3.2.1",
+    "animate.css": "^3.5.2",
+    "wow": "wowjs#^1.1.2"
   }
 }

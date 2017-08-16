@@ -2,5 +2,6 @@
 	display: inline-block
 	vertical-align: middle
 
-.fri-qube-logo
-	+sprite(qube-logo)
+@each $value in magnifier, box, bags, container, truck, hand-money, timer, paper, shield, hand-box, timer-count, facebook-green, instagram-green
+	.fri-#{$value}
+		+sprite($value)

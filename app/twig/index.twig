@@ -2,12 +2,126 @@
 
 {% block pageTitle %}Главная страница{% endblock %}
 
-<style>
-    .hello {
-        border: 2px solid #ffaaaa;
-    }
-</style>
-
 {% block content %}
-    <div class="logo"><i class="fri fri-qube-logo"></i></div>
+    <section class="fw-bg-color-white fw-border-box fw-pt-60 fw-pt-115@m fw-pb-60 fw-pb-97@m">
+        <div class="container">
+            <div class="fw-text-center">
+                <p class="fw-margin-none fw-fz-30 fw-fz-48@m fw-font-bold fw-text-uppercase wow fadeIn">О компании</p>
+                <p class="fw-fz-30 fw-fz-48@m fw-mb-0 fw-mt-15 fw-mt-inverse-5@m fw-text-uppercase wow fadeIn">Eurasia Global Logistic Company </p>
+                <p class="fw-fz-20 fw-fz-30@m fw-mb-0 fw-mt-35 fw-max-width-1000 fw-inline-block fw-color-grey-dark wow fadeIn">Учредители и сотрудники компании Eurasia Global Logistic Company
+                    имеют 17-летний опыт доставки сборных грузов из Китая. <br>
+                    Мы занимаемся доставкой и таможенной очисткой грузов из Китая в Казахстан
+                    и страны Таможенного Союза. </p>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/section-from.twig' %}
+
+    <section id="services" class="fw-bg-color-white fw-border-box fw-pt-60 fw-pt-86@m fw-pb-60 fw-pb-97@m">
+        <div class="container">
+            <div class="fw-text-center">
+                <p class="fw-margin-none fw-fz-30 fw-fz-48@m fw-font-bold fw-text-uppercase wow fadeIn">услуги нашей компании</p>
+                <div class="fw-grid fw-grid-20 fw-grid-65@m fw-grid-center fw-mt-40 fw-mt-80@m">
+                    <div class="fw-width-1-1 fw-width-1-3@m wow slideInLeft">
+                        <div class="fw-flex fw-flex-column fw-flex-middle">
+                            <span class="fw-mb-34 fw-min-height-128"><i class="fri fri-magnifier"></i></span>
+                            <span class="fw-color-grey-dark">Поиск поставщиков и доставка грузов из Китая в города РК, России, Белоруссии</span>
+                        </div>
+                    </div>
+                    <div class="fw-width-1-1 fw-width-1-3@m">
+                        <div class="fw-flex fw-flex-column fw-flex-middle wow fadeIn">
+                            <span class="fw-mb-34 fw-min-height-128"><i class="fri fri-box"></i></span>
+                            <span class="fw-color-grey-dark">Доставка и таможенная очистка  сборных грузов «под ключ»</span>
+                        </div>
+                    </div>
+                    <div class="fw-width-1-1 fw-width-1-3@m wow slideInRight">
+                        <div class="fw-flex fw-flex-column fw-flex-middle">
+                            <span class="fw-mb-34 fw-min-height-128"><i class="fri fri-bags"></i></span>
+                            <span class="fw-color-grey-dark">Доставка и таможенная очистка  сборных грузов «под ключ»</span>
+                        </div>
+                    </div>
+                    <div class="fw-width-1-1 fw-width-1-3@m">
+                        <div class="fw-flex fw-flex-column fw-flex-middle wow slideInLeft">
+                            <span class="fw-mb-34 fw-min-height-128"><i class="fri fri-container"></i></span>
+                            <span class="fw-color-grey-dark">Доставка грузов по ЖД контейнерами</span>
+                        </div>
+                    </div>
+                    <div class="fw-width-1-1 fw-width-1-3@m">
+                        <div class="fw-flex fw-flex-column fw-flex-middle wow slideInRight">
+                            <span class="fw-mb-34 fw-min-height-128 fw-flex fw-flex-bottom"><i class="fri fri-truck"></i></span>
+                            <span class="fw-color-grey-dark">Доставка грузов автотранспортом</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fw-mt-115 wow fadeIn">
+                    <p class="fw-fz-30 fw-margin-none">Сборные грузы консолидируем на складе в г. Урумчи.</p>
+                    <p class="fw-fz-30 fw-mt-20 fw-mb-0">Прямая доставка сборных грузов в контейнерах из Урумчи в Алматы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/section-from.twig' %}
+
+    <section id="advantages" class="fw-bg-color-white fw-border-box fw-pt-60 fw-pt-86@m fw-pb-60 fw-pb-100@m">
+        <div class="container">
+            <div class="fw-text-center">
+                <p class="fw-margin-none fw-fz-30 fw-fz-48@m fw-font-bold fw-text-uppercase wow fadeIn">Наши</p>
+                <p class="fw-margin-none fw-fz-30 fw-fz-48@m fw-text-uppercase wow fadeIn">ПРЕИМУЩЕСТВА</p>
+                <div class="fw-grid fw-grid-50 fw-grid-center fw-mt-60">
+                    <div class="fw-width-1-1 fw-width-1-3@m">
+                        <div class="fw-flex fw-flex-column fw-flex-middle wow slideInLeft">
+                            <span class="fw-mb-34 fw-min-height-128"><i class="fri fri-hand-money"></i></span>
+                            <span class="fw-color-grey-dark">Экономим ваши деньги</span>
+                        </div>
+                    </div>
+                    <div class="fw-width-1-1 fw-width-1-3@m">
+                        <div class="fw-flex fw-flex-column fw-flex-middle wow fadeIn">
+                            <span class="fw-mb-34 fw-min-height-128"><i class="fri fri-timer"></i></span>
+                            <span class="fw-color-grey-dark">Экономим ваше время</span>
+                        </div>
+                    </div>
+                    <div class="fw-width-1-1 fw-width-1-3@m">
+                        <div class="fw-flex fw-flex-column fw-flex-middle wow slideInRight">
+                            <span class="fw-mb-34 fw-min-height-128"><i class="fri fri-paper"></i></span>
+                            <span class="fw-color-grey-dark">Компания зарегистрирована в РК</span>
+                        </div>
+                    </div>
+                    <div class="fw-width-1-1 fw-width-1-3@m">
+                        <div class="fw-flex fw-flex-column fw-flex-middle wow slideInLeft">
+                            <span class="fw-mb-34 fw-min-height-128"><i class="fri fri-shield"></i></span>
+                            <span class="fw-color-grey-dark">Завозим груз в 100% сохранности</span>
+                        </div>
+                    </div>
+                    <div class="fw-width-1-1 fw-width-1-3@m">
+                        <div class="fw-flex fw-flex-column fw-flex-middle wow fadeIn">
+                            <span class="fw-mb-34 fw-min-height-128 fw-flex fw-flex-bottom"><i class="fri fri-hand-box"></i></span>
+                            <span class="fw-color-grey-dark">Доставляем грузы точно в срок</span>
+                        </div>
+                    </div>
+                    <div class="fw-width-1-1 fw-width-1-3@m">
+                        <div class="fw-flex fw-flex-column fw-flex-middle wow slideInRight">
+                            <span class="fw-mb-34 fw-min-height-128 fw-flex fw-flex-bottom"><i class="fri fri-timer-count"></i></span>
+                            <span class="fw-color-grey-dark">Расчет по запросам в течение 10 минут</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="delivery" class="fw-bg-color-green fw-border-box fw-pt-60 fw-pt-93@m fw-pb-60 fw-pb-97@m fw-mt-5">
+        <div class="container">
+            <div class="fw-text-center">
+                <p class="fw-margin-none fw-fz-30 fw-fz-48@m fw-font-bold fw-text-uppercase fw-color-white wow fadeIn">СРОК ДОСТАВКИ ГРУЗА</p>
+                <ul class="fw-width-1-1 fw-max-width-700 fw-text-left fw-inline-block fw-mt-30 fw-pl-15 fw-pr-15 fw-border-box">
+                    <li class="fw-border-box fw-pl-30@m fw-color-white fw-fz-14 fw-fz-20 fw-fz-30@m fw-mt-10 fw-mt-0@m wow fadeIn">Урумчи (склад) – Алматы -15 дней</li>
+                    <li class="fw-border-box fw-pl-30@m fw-color-white fw-fz-14 fw-fz-20 fw-fz-30@m fw-mt-10 fw-mt-0@m wow fadeIn">Урумчи (склад) - города РК (склад) - 20 дней</li>
+                    <li class="fw-border-box fw-pl-30@m fw-color-white fw-fz-14 fw-fz-20 fw-fz-30@m fw-mt-10 fw-mt-0@m wow fadeIn">Урумчи (склад) - города России (склад) - 25 дней</li>
+                </ul>
+                <p class="fw-margin-none fw-fz-20 fw-fz-36@m fw-font-bold fw-text-uppercase fw-color-white fw-mt-57 wow fadeIn">Мы на связи 24/7</p>
+            </div>
+        </div>
+    </section>
 {% endblock %}
